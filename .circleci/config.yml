@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    working_directory: "/go/src/github.com/YHiroyuki/datadiff"
+    docker:
+      - image: golang:1.9
+    environment:
+      - GOPATH: "/go"
+    steps:
+      - checkout
+      - run: ls $GOPATH/src/
+      - run:
+          name: "go"
+          command: |
+            go test github.com/YHiroyuki/datadiff
