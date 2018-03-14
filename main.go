@@ -5,7 +5,9 @@ import (
 )
 
 func manin() {
-	fmt.Println(Sum(1, 3))
+	a := 1
+	b := 3
+	fmt.Println(Sum(a, b))
 }
 
 func Sum(a, b int) int {
